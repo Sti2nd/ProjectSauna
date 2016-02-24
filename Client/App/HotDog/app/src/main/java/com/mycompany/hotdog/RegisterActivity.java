@@ -65,7 +65,9 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
         && validatePassword(password.getText().toString())
         && validateRetypePassword(password.getText().toString(), retypePassword.getText().toString())){
             //Validation succsessful
-            Toast.makeText(getApplicationContext(), "Validation OK! Sending to database.",
+            DBConnector db = new DBConnector();
+            ResultSet s = db.makeQuery("Select * from Bruker;").getResultSet();
+            Toast.makeText(getApplicationContext(), s.toString(),
                     Toast.LENGTH_LONG).show();
         }
 
