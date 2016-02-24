@@ -28,3 +28,9 @@ crashlytics-build.properties
 .DS_STORE
 .Trashes
 .Spotlight-V100
+
+#Androidstudio
+.gradle-wrapper.properties
+.gradle
+.gradlew.bat
+.settings.gradle
