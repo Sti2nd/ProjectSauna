@@ -34,3 +34,5 @@ crashlytics-build.properties
 .gradle
 .gradlew.bat
 .settings.gradle
+
+!Client/App/HotDog/app/libs/

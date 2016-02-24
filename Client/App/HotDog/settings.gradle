@@ -1,0 +1,2 @@
+include ':app', ':DataBaseConnector'
+project(':DataBaseConnector').projectDir = new File('/libs/mysql-connector-java-5.1.38')

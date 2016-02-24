@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import java.sql.*;
+
 
 
 public class RegisterActivity extends ActionBarActivity implements View.OnClickListener {
@@ -58,14 +60,16 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        validateUsername(username.getText().toString());
-        validateEmail(email.getText().toString());
-        validatePassword(password.getText().toString());
-        validateRetypePassword(password.getText().toString(), retypePassword.getText().toString());
+        if( validateUsername(username.getText().toString())
+        && validateEmail(email.getText().toString())
+        && validatePassword(password.getText().toString())
+        && validateRetypePassword(password.getText().toString(), retypePassword.getText().toString())){
+            //Validation succsessful
+            Toast.makeText(getApplicationContext(), "Validation OK! Sending to database.",
+                    Toast.LENGTH_LONG).show();
+        }
 
 
-        Toast.makeText(getApplicationContext(), "Your toast message",
-                Toast.LENGTH_LONG).show();
 
     }
 
@@ -78,7 +82,7 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
     }
 
     private boolean validatePassword(String password){
-        return password.length() > 7;
+        return password.length() > 6;
     }
 
     private boolean validateRetypePassword(String password, String retypePassword){
