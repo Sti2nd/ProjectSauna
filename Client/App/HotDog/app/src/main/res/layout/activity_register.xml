@@ -74,8 +74,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="120dp"
@@ -90,6 +89,25 @@
             android:ems="10"
             android:id="@+id/inputRetypePassword" />
     </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Raspberry Number"
+            android:id="@+id/stringRaspnum" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/inputRaspnum" />
+    </LinearLayout>
+
 
     <Button
         android:layout_width="wrap_content"
@@ -97,5 +115,17 @@
         android:text="OK"
         android:id="@+id/okButton"
         android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Already have an account? Sign in here."
+        android:id="@+id/loginlink"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:textColor="#0000EE"
+        android:onClick="onClick"/>
+
 
 </LinearLayout>
