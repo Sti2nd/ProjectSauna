@@ -18,13 +18,17 @@ import java.util.HashMap;
 
 public class LoginActivity extends ActionBarActivity implements View.OnClickListener, AsyncResponse {
 
+    //Setter felt
     private EditText username, password;
 
+
+    //Kalles når aktivitet starter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //Linker felt til xml
         username = (EditText)findViewById(R.id.inputLoginUsername);
         password = (EditText)findViewById(R.id.inputLoginPassword);
 
@@ -56,22 +60,33 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         return super.onOptionsItemSelected(item);
     }
 
+
+    //Kalles når PHP-server gir svar
     @Override
     public void processFinish(String result) {
+        //Dersom login var suksessfullt, gå til main-activity.
         if (result.equals("Success")){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
+        //Ellers gi beskjed til bruker om at brukernavn/passord er feil.
         else if (result.equals("NoResult")){
             Toast.makeText(this, "Wrong username/password", Toast.LENGTH_SHORT).show();
         }
     }
 
+
+    //Kalles når en knapp trykkes
     @Override
     public void onClick(View v) {
+        // Sjekker at OK-knapp ble trykket
         if (v.getId() == R.id.okLoginButton){
+
+            //Validerer brukernavn og passord
             if (validateUsername(username.getText().toString())
                     && validatePassword(password.getText().toString())){
+
+                //Sender data til PHP-server.
                 HashMap postData = new HashMap();
                 postData.put("mobile", "android");
                 postData.put("username", username.getText().toString());
