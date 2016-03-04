@@ -64,14 +64,16 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     //Kalles når PHP-server gir svar
     @Override
     public void processFinish(String result) {
-        //Dersom login var suksessfullt, gå til main-activity.
-        if (result.equals("Success")){
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        }
-        //Ellers gi beskjed til bruker om at brukernavn/passord er feil.
-        else if (result.equals("NoResult")){
+        //Gi beskjed til bruker om at brukernavn/passord er feil.
+        if (result.equals("NoResult")){
             Toast.makeText(this, "Wrong username/password", Toast.LENGTH_SHORT).show();
+        }
+        //Dersom login var suksessfullt, gå til main-activity.
+        else {
+
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("raspnum", result);
+            startActivity(intent);
         }
     }
 

@@ -6,15 +6,46 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import com.kosalgeek.asynctask.AsyncResponse;
+import com.kosalgeek.asynctask.PostResponseAsyncTask;
+
+import java.util.HashMap;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements AsyncResponse {
 
+    private String raspnum;
+    private TextView tempView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Hent raspnum fra bundle
+        Bundle bundle = getIntent().getExtras();
+        raspnum = bundle.getString("raspnum");
+
+        tempView = (TextView)findViewById(R.id.show_temp);
+        setTemp();
+    }
+
+    private void setTemp() {
+        //Send raspnum til PHP-server
+        HashMap postData = new HashMap();
+        postData.put("mobile", "android");
+        postData.put("raspnum", raspnum);
+
+        PostResponseAsyncTask task = new PostResponseAsyncTask(this, postData);
+        task.execute("http://folk.ntnu.no/sigurbe/getTemperature.php");
+    }
+
+    @Override
+    public void processFinish(String s) {
+        //endre tekst til temperatur.
+        tempView.setText(s);
     }
 
 
@@ -39,4 +70,5 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

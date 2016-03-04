@@ -22,5 +22,5 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.2.0'
-    compile files('C:/Dropbox/Skole/TDT 4140 - PU/ProjectSauna/Client/App/HotDog/libs/GenAsync.jar')
+    compile files('/libs/GenAsync.jar')
 }

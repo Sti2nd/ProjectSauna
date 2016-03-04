@@ -114,6 +114,7 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
         //Sjekker om registrering var suksessfull. Sender isåfall bruker videre til MainActivity.
         if (result.equals("Success")){
             Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("raspnum", raspnum.getText().toString());
             startActivity(intent);
         }
     }
