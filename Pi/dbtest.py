@@ -1,4 +1,3 @@
-import MySQLdb
 import time
 import os
 import glob
@@ -40,15 +39,25 @@ def read_temp():
 #cur = db.cursor()
 
 # SQL & shit here
-temperature = 0.0
-device_on = True
-while(device_on):
-    print(read_temp())
-    temperature = read_temp()
-    #cur.execute("INSERT INTO DataLinje (temperatur, raspberry_lopeNr) VALUES ('%s', '%s')",(temperature, 1))
-    time.sleep(5)
+#temperature = 0.0
+#device_on = True
+#while(device_on):
+#    print(read_temp())
+#    temperature = read_temp()
+#    cur.execute("INSERT INTO DataLinje (temperatur, raspberry_lopeNr) VALUES ('%s', '%s')",(temperature, 2))
+#    time.sleep(5)
 #    db.commit()
-
-
-
 #db.close()
+
+
+# PHP server post
+import urllib2, urllib
+deviceOn = True
+while(deviceOn):
+    mydata=[('temperatur',read_temp()),('lopeNr','2')]    #The first is the var name the second is the value
+    mydata=urllib.urlencode(mydata)
+    path='http://folk.ntnu.no/roberei/hotdog/postTemperature.php'    #the url you want to POST to
+    req=urllib2.Request(path, mydata)
+    req.add_header("Content-type", "application/x-www-form-urlencoded")
+    page=urllib2.urlopen(req).read()
+    time.sleep(5)
