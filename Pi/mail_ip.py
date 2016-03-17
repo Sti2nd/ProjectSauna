@@ -10,7 +10,7 @@ ip = ip.decode('utf-8')
 ip = json.loads(ip)
 
 # Change to your own account information:
-to = 'kristoffer.finckenhagen@gmail.com'
+to = 'pekkamekka.q57lb@zapiermail.com'
 gmail_user = 'hotdog.ip.sender@gmail.com'
 gmail_password = 'pekkamekka'
 smtpserver = smtplib.SMTP('smtp.gmail.com', 587)
