@@ -1,11 +1,13 @@
 package com.mycompany.hotdog;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.kosalgeek.asynctask.AsyncResponse;
@@ -30,6 +32,28 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
 
         tempView = (TextView)findViewById(R.id.show_temp);
         setTemp();
+
+        //Start sjekk av temp i bakgrunn
+        startBackgroundService();
+    }
+
+    private void startBackgroundService() {
+        try {
+            AlarmManager alarms = (AlarmManager) this
+                    .getSystemService(Context.ALARM_SERVICE);
+
+            Intent intent = new Intent(getApplicationContext(), TempReceiver.class);
+            intent.putExtra(TempReceiver.ACTION_TEMP, TempReceiver.ACTION_TEMP);
+            intent.putExtra("raspnum", raspnum);
+
+            final PendingIntent pIntent = PendingIntent.getBroadcast(this, 1234567, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            alarms.setRepeating(AlarmManager.RTC_WAKEUP,
+                    System.currentTimeMillis(), 60000, pIntent);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void setTemp() {

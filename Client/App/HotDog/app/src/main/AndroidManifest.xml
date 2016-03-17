@@ -15,7 +15,6 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,6 +26,15 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
+        <service
+            android:name=".TempService"
+            android:exported="false" >
+        </service>
+
+        <receiver
+            android:name="TempReceiver"
+            android:label="@string/title_activity_recieve_temp" >
+        </receiver>
     </application>
 
 </manifest>

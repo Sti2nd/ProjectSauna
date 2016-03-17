@@ -1,0 +1,8 @@
+@startuml
+
+RegisterActivity -> LoginActivity: Sign in to existing account
+LoginActivity -> MainActivity: Sign in
+RegisterActivity -> MainActivity: Register a new account
+MainActivity -> TempReceiver: Create receiver. Set repetition factor x.
+TempReceiver -> TempService: Start new service. Give raspnum. Do again in x ms.
+@enduml
