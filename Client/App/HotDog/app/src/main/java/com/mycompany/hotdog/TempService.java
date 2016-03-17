@@ -4,6 +4,7 @@ import android.app.IntentService;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.media.RingtoneManager;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
 
@@ -62,7 +63,7 @@ public class TempService extends IntentService{
             temp = Double.parseDouble(response);
 
             //Hvis temperatur er over 40 grader, lag notifikasjon.
-            if (temp > 40) {
+            if (temp > 30) {
                 createNotification();
             }
 
@@ -77,10 +78,13 @@ public class TempService extends IntentService{
 
     private void createNotification() {
         //Bygger en notification. Stort sett kopiert fra http://developer.android.com/training/notify-user/build-notification.html#action
+        long[] vibrationFreq = {500, 1000};
         NotificationCompat.Builder mBuilder = (NotificationCompat.Builder) new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.notification_template_icon_bg)
                 .setContentTitle("Temperature high!")
-                .setContentText("Temperature is " + temp.toString());
+                .setContentText("Temperature is " + temp.toString())
+                .setVibrate(vibrationFreq)
+                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
         Intent resultIntent = new Intent(this, TempService.class);
         PendingIntent resultPendingIntent =
                 PendingIntent.getActivity(
