@@ -116,6 +116,8 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra("raspnum", raspnum.getText().toString());
             startActivity(intent);
+        } else if (result.equals("error")){
+            Toast.makeText(this, "Raspberry Pi number isn't registered in our database", Toast.LENGTH_SHORT);
         }
     }
 

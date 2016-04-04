@@ -1,6 +1,9 @@
 package com.mycompany.hotdog;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -70,11 +73,23 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         }
         //Dersom login var suksessfullt, gå til main-activity.
         else {
-
-            Intent intent = new Intent(this, MainActivity.class);
-            intent.putExtra("raspnum", result);
-            startActivity(intent);
+            if (isNetworkAvailable()) {
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.putExtra("raspnum", result);
+                startActivity(intent);
+            }
+            else {
+                Toast.makeText(this, "No internet connection. Please connect and try again!", Toast.LENGTH_LONG).show();
+            }
         }
+    }
+
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
 
