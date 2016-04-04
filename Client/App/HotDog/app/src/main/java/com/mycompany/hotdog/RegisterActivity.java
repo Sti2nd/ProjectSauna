@@ -1,6 +1,7 @@
 package com.mycompany.hotdog;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -45,6 +46,9 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
         // Setter opp OK-knapp, og setter opp clicklistener.
         Button okButton = (Button)findViewById(R.id.okButton);
         okButton.setOnClickListener(this);
+
+        //Lås til portrett, ikke lov å rotere skjerm
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
 

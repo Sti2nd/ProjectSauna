@@ -4,6 +4,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -35,6 +36,9 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
 
         //Start sjekk av temp i bakgrunn
         startBackgroundService();
+
+        //Lås til portrett, ikke lov å rotere skjerm
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
     private void startBackgroundService() {
