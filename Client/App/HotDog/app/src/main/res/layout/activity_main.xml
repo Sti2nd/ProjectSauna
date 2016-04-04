@@ -18,4 +18,20 @@
             android:id="@+id/show_temp"
             android:textSize="@dimen/abc_text_size_title_material"/>
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Admin page"
+        android:id="@+id/button"
+        android:layout_marginTop="390dp"
+        android:layout_weight="0.07"
+        android:height="70dp"
+        android:width="130dp"
+        android:textSize="17dp"
+        android:background="#cb615e5c"
+        android:textColor="#e1ff00"
+        android:typeface="monospace"
+        android:onClick="onClickAdmin"
+        android:layout_marginLeft="80dp" />
 </LinearLayout>
