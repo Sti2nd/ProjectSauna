@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.kosalgeek.asynctask.AsyncResponse;
@@ -95,5 +96,12 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void onClickAdmin(View view) {
+        Intent intent = new Intent(this, AdminActivity.class);
+        startActivity(intent);
+    }
+
+
 
 }
