@@ -30,7 +30,6 @@ public class AdminActivity extends ActionBarActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        textView.setText("hello");
     }
 
     private void setAdminInfo(){
