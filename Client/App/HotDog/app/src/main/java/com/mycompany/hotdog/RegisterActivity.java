@@ -46,9 +46,6 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
         // Setter opp OK-knapp, og setter opp clicklistener.
         Button okButton = (Button)findViewById(R.id.okButton);
         okButton.setOnClickListener(this);
-
-        //Lås til portrett, ikke lov å rotere skjerm
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
 

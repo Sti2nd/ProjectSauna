@@ -36,9 +36,6 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
 
         //Start sjekk av temp i bakgrunn
         startBackgroundService();
-
-        //Lås til portrett, ikke lov å rotere skjerm
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
     private void startBackgroundService() {

@@ -39,9 +39,6 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         // Setting ok-button.
         Button okLoginButton = (Button)findViewById(R.id.okLoginButton);
         okLoginButton.setOnClickListener(this);
-
-        //Lås til portrett, ikke lov å rotere skjerm
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
 
