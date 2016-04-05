@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/inputFeedback"
             android:layout_gravity="center_horizontal"
             android:maxHeight="160dp" />
     </FrameLayout>
@@ -36,10 +36,18 @@
         android:layout_width="124dp"
         android:layout_height="wrap_content"
         android:text="Send feedback"
-        android:id="@+id/button4"
+        android:id="@+id/feedbackButton"
         android:layout_gravity="center_horizontal"
         android:background="#cb615e5c"
-        android:textColor="#e1ff00"/>
+        android:textColor="#e1ff00"
+        android:onClick="onClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewResponse"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,6 +56,7 @@
         android:id="@+id/textView2"
         android:layout_weight="0.15"
         android:layout_marginTop="70dp"
+        android:layout_marginLeft="10dp"
         android:textColor="#494747"
         android:textSize="22dp" />
 
@@ -58,14 +67,14 @@
         android:id="@+id/textView3"
         android:layout_gravity="center_horizontal"
         android:textColor="#494747"
-        android:layout_marginLeft="-20dp"
+        android:layout_marginLeft="0dp"
         android:textSize="24dp" />
 
     <Button
         android:layout_width="167dp"
         android:layout_height="51dp"
         android:text="Log out"
-        android:id="@+id/button"
+        android:id="@+id/logoutButton"
         android:height="70dp"
         android:width="130dp"
         android:textSize="17dp"
