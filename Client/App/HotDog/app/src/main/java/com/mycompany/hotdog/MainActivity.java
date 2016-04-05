@@ -103,5 +103,8 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
     }
 
 
-
+    public void onClickLogout(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
 }

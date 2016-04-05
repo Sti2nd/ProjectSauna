@@ -63,9 +63,20 @@
         android:text="OK"
         android:id="@+id/okLoginButton"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:textColor="#645455" />
+        android:background="#cb615e5c"
+        android:textColor="#e1ff00"
+        android:layout_marginTop="25dp" />
 
+    <Button
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:text="Create new account"
+        android:layout_marginTop="35dp"
+        android:background="#cb615e5c"
+        android:textColor="#e1ff00"
+        android:id="@+id/button3"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClickCreateAccount" />
 
 
 </LinearLayout>

@@ -118,6 +118,11 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
     }
 
+    public void onClickCreateAccount(View v) {
+       Intent intent = new Intent(this, RegisterActivity.class);
+       startActivity(intent);
+   }
+
     private boolean validateUsername(String s) {
         return true;
     }

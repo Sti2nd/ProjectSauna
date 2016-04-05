@@ -127,7 +127,9 @@
         android:text="OK"
         android:id="@+id/okButton"
         android:layout_gravity="center_horizontal"
-        android:textColor="#645455"
+        android:background="#cb615e5c"
+        android:textColor="#e1ff00"
+        android:layout_marginTop="15dp"
         android:textStyle="bold"/>
 
     <TextView
@@ -140,6 +142,7 @@
         android:clickable="true"
         android:textColor="#0000EE"
         android:onClick="onClick"
+        android:layout_marginTop="10dp"
         style="white;" />
 
 
