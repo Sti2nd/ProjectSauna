@@ -48,7 +48,7 @@
     <Button
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="Go to Admin page"
+        android:text="Leave feedback"
         android:id="@+id/button"
         android:layout_marginTop="390dp"
         android:height="70dp"

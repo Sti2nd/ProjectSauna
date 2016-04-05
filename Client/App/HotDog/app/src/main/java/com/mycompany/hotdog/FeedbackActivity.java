@@ -9,18 +9,12 @@ import android.widget.TextView;
 
 import com.kosalgeek.asynctask.AsyncResponse;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
-
 /**
  * Created by corneliusgriegdahling on 04/04/16.
  */
 
 
-public class AdminActivity extends ActionBarActivity implements View.OnClickListener, AsyncResponse {
+public class FeedbackActivity extends ActionBarActivity implements View.OnClickListener, AsyncResponse {
 
     private TextView textView;
 
@@ -28,7 +22,7 @@ public class AdminActivity extends ActionBarActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin);
+        setContentView(R.layout.activity_feedback);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 

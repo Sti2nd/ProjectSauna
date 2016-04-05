@@ -30,8 +30,8 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".AdminActivity"
-            android:label="AdminActivity"
+            android:name=".FeedbackActivity"
+            android:label="FeedbackActivity"
             android:screenOrientation="portrait" >
         </activity>
         <service
