@@ -80,7 +80,7 @@ public class TempService extends IntentService{
         //Bygger en notification. Stort sett kopiert fra http://developer.android.com/training/notify-user/build-notification.html#action
         long[] vibrationFreq = {500, 1000};
         NotificationCompat.Builder mBuilder = (NotificationCompat.Builder) new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.notification_template_icon_bg)
+                .setSmallIcon(R.drawable.notification_icon)
                 .setContentTitle("Temperature high!")
                 .setContentText("Temperature is " + temp.toString())
                 .setVibrate(vibrationFreq)
