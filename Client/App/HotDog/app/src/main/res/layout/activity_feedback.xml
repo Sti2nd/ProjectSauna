@@ -39,7 +39,7 @@
         android:id="@+id/feedbackButton"
         android:layout_gravity="center_horizontal"
         android:background="#cb615e5c"
-        android:textColor="#e1ff00"
+        android:textColor="#e7d3b0"
         android:onClick="onClick" />
 
     <TextView
@@ -79,7 +79,7 @@
         android:width="130dp"
         android:textSize="17dp"
         android:background="#cb615e5c"
-        android:textColor="#e1ff00"
+        android:textColor="#e7d3b0"
         android:typeface="monospace"
         android:onClick="onClick"
         android:layout_marginLeft="80dp"
