@@ -21,17 +21,17 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="MainActivity"
+            android:label="Register"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
+            android:label="Login"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".FeedbackActivity"
-            android:label="FeedbackActivity"
+            android:label="Feedback"
             android:screenOrientation="portrait" >
         </activity>
         <service

@@ -12,22 +12,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Temperatur: "
-            android:textSize="@dimen/abc_text_size_title_material"
+            android:textSize="31dp"
             android:textColor="#645455" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/show_temp"
-            android:textSize="@dimen/abc_text_size_title_material"
+            android:textSize="31dp"
             android:text="000"
-            android:textColor="#645455" />
+            android:textColor="#645455"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="°C"
-            android:textSize="@dimen/abc_text_size_title_material"
-            android:textColor="#645455" />
+            android:textSize="31dp"
+            android:textColor="#645455"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="wrap_content"
@@ -42,7 +44,7 @@
             android:textColor="#e1ff00"
             android:typeface="monospace"
             android:onClick="onClickLogout"
-            android:layout_marginLeft="-170dp" />
+            android:layout_marginLeft="-265dp" />
     </LinearLayout>
 
     <Button

@@ -38,17 +38,6 @@ public class FeedbackActivity extends ActionBarActivity implements View.OnClickL
         textViewResponse.setText("hwll");
     }
 
-    public void onClickSendFeedback(){
-        //postData sendes til PHP-serveren for å legge inn verdier.
-        textViewResponse.setText("helloooooo");
-        HashMap postData = new HashMap();
-        postData.put("mobile", "android");
-        postData.put("username", feedback.getText().toString());
-
-        PostResponseAsyncTask task = new PostResponseAsyncTask(this, postData);
-        task.execute("http://folk.ntnu.no/sigurbe/register.php");
-    }
-
     @Override
     public void onClick(View v) {
 
@@ -56,7 +45,7 @@ public class FeedbackActivity extends ActionBarActivity implements View.OnClickL
             //postData sendes til PHP-serveren for å legge inn verdier.
             HashMap postData = new HashMap();
             postData.put("mobile", "android");
-            postData.put("username", feedback.getText().toString());
+            postData.put("feedback", feedback.getText().toString());
 
             PostResponseAsyncTask task = new PostResponseAsyncTask(this, postData);
             task.execute("http://folk.ntnu.no/cornelgd/feedback.php");
