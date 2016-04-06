@@ -32,40 +32,45 @@
             android:textStyle="bold" />
     </LinearLayout>
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
         android:id="@+id/ic_dog_state"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log out"
-        android:id="@+id/button2"
-        android:layout_marginTop="390dp"
-        android:height="70dp"
-        android:width="130dp"
-        android:textSize="17dp"
-        android:background="#cb615e5c"
-        android:textColor="#e1ff00"
-        android:typeface="monospace"
-        android:onClick="onClickLogout"
-        android:layout_marginLeft="-265dp" />
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
 
-    <Button
-        android:layout_width="180dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Leave feedback"
-        android:id="@+id/button"
-        android:layout_marginTop="390dp"
-        android:height="70dp"
-        android:width="130dp"
-        android:textSize="17dp"
-        android:background="#cb615e5c"
-        android:textColor="#e1ff00"
-        android:typeface="monospace"
-        android:onClick="onClickFeedback"
-        android:layout_marginLeft="-180dp" />
+        android:orientation="horizontal"
+        android:gravity="bottom|center_horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log out"
+            android:id="@+id/button2"
+            android:height="70dp"
+            android:width="120dp"
+            android:textSize="17dp"
+            android:background="#cb615e5c"
+            android:textColor="#e1ff00"
+            android:typeface="monospace"
+            android:onClick="onClickLogout"
+            android:layout_marginRight="10dp" />
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Leave feedback"
+            android:id="@+id/button"
+            android:height="70dp"
+            android:width="120dp"
+            android:textSize="17dp"
+            android:background="#cb615e5c"
+            android:textColor="#e1ff00"
+            android:typeface="monospace"
+            android:onClick="onClickFeedback"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
 </LinearLayout>
 
