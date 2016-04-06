@@ -65,7 +65,7 @@ public class FeedbackActivity extends ActionBarActivity implements View.OnClickL
         if (result.equals("Success")){
             textViewResponse.setText("Thank you for your feedback!");
         } else if (result.equals("error")){
-            textViewResponse.setText("Oops something went wrong.");
+            textViewResponse.setText("Oops something went wrong. Please try again!");
         }
     }
 }
