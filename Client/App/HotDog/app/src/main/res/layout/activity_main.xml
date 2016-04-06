@@ -57,6 +57,6 @@
         android:background="#cb615e5c"
         android:textColor="#e1ff00"
         android:typeface="monospace"
-        android:onClick="onClickAdmin"
+        android:onClick="onClickFeedback"
         android:layout_marginLeft="-180dp" />
 </LinearLayout>

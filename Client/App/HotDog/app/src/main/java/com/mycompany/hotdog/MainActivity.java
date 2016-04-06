@@ -96,7 +96,7 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClickAdmin(View view) {
+    public void onClickFeedback(View view) {
         Intent intent = new Intent(this, FeedbackActivity.class);
         startActivity(intent);
     }
