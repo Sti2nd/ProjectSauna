@@ -74,6 +74,7 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
     // Denne metoden blir kalt når OK blir trykket, eller når teksten til Login blir trykket.
     @Override
     public void onClick(View v) {
+        System.out.println("Registert klikk");
         //Sjekker om knappen ble trykket på.
         if (v.getId() == R.id.okButton) {
 
@@ -97,8 +98,9 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
 
             }
         }
-        //Sjekker om login-teksten ble trykket på. Starter i såfall Login-aktiviteten
+        //Sjekker om login-button ble trykket på. Starter i såfall Login-aktiviteten
         else if (v.getId() == R.id.loginButton){
+            System.out.println("Else loginButton");
             startLoginActivity();
         }
     }
