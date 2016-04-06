@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.kosalgeek.asynctask.AsyncResponse;
@@ -21,6 +22,7 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
 
     private String raspnum;
     private TextView tempView;
+    private ImageView dogState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
 
         tempView = (TextView)findViewById(R.id.show_temp);
         setTemp();
+        dogState = (ImageView)findViewById(R.id.ic_dog_state);
 
         //Start sjekk av temp i bakgrunn
         startBackgroundService();
@@ -71,6 +74,16 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
     public void processFinish(String s) {
         //endre tekst til temperatur.
         tempView.setText(s);
+        double temperature = Double.parseDouble(s);
+        if (temperature < 20){
+            dogState.setImageResource(R.drawable.dog_en);
+        } else if (temperature < 30){
+            dogState.setImageResource(R.drawable.dog_to);
+        } else if (temperature < 40){
+            dogState.setImageResource(R.drawable.dog_tre);
+        } else{
+            dogState.setImageResource(R.drawable.dog_fire);
+        }
     }
 
 

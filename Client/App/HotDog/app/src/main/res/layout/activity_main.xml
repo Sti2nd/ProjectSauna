@@ -1,12 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/yellow_background">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/yellow_background">
-
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,22 +30,28 @@
             android:textSize="31dp"
             android:textColor="#645455"
             android:textStyle="bold" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Log out"
-            android:id="@+id/button2"
-            android:layout_marginTop="390dp"
-            android:height="70dp"
-            android:width="130dp"
-            android:textSize="17dp"
-            android:background="#cb615e5c"
-            android:textColor="#e1ff00"
-            android:typeface="monospace"
-            android:onClick="onClickLogout"
-            android:layout_marginLeft="-265dp" />
     </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ic_dog_state"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:id="@+id/button2"
+        android:layout_marginTop="390dp"
+        android:height="70dp"
+        android:width="130dp"
+        android:textSize="17dp"
+        android:background="#cb615e5c"
+        android:textColor="#e1ff00"
+        android:typeface="monospace"
+        android:onClick="onClickLogout"
+        android:layout_marginLeft="-265dp" />
+
 
     <Button
         android:layout_width="180dp"
@@ -62,3 +68,4 @@
         android:onClick="onClickFeedback"
         android:layout_marginLeft="-180dp" />
 </LinearLayout>
+
