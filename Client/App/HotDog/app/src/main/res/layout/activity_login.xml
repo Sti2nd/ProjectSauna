@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/logo_hotDog" />
+        android:src="@drawable/logo_hotdog" />
 
 
 </LinearLayout>
