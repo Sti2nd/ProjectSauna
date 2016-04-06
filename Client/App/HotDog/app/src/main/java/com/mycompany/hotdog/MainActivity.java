@@ -125,8 +125,4 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
         setTemp();
     }
 
-    public void onClickAdmin(View view) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://folk.ntnu.no/cornelgd/7/php/admin.php"));
-        startActivity(browserIntent);
-    }
 }
