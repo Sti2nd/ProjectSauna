@@ -136,14 +136,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Already have an account? Sign in here."
-        android:id="@+id/loginlink"
+        android:text="Already have an account?"
+        android:id="@+id/registerText"
         android:layout_gravity="center_horizontal"
-        android:clickable="true"
-        android:textColor="#0000EE"
-        android:onClick="onClick"
-        android:layout_marginTop="10dp"
-        style="white;" />
+        android:layout_marginTop="30dp"
+        style="white;"
+        android:textColor="#645455" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:id="@+id/loginButton"
+        android:layout_gravity="center_horizontal"
+        android:background="#cb615e5c"
+        android:textColor="#e1ff00"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"/>
 
 </LinearLayout>
