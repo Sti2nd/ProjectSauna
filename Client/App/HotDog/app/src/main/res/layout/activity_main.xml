@@ -63,7 +63,7 @@
             android:width="120dp"
             android:textSize="17dp"
             android:background="#cb615e5c"
-            android:textColor="#e1ff00"
+            android:textColor="#e7d3b0"
             android:typeface="monospace"
             android:onClick="onClickLogout"
             android:layout_marginRight="10dp" />
@@ -76,7 +76,7 @@
             android:width="120dp"
             android:textSize="17dp"
             android:background="#cb615e5c"
-            android:textColor="#e1ff00"
+            android:textColor="#e7d3b0"
             android:typeface="monospace"
             android:onClick="onClickFeedback"
             android:layout_marginRight="10dp"/>
