@@ -98,7 +98,7 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
             }
         }
         //Sjekker om login-teksten ble trykket på. Starter i såfall Login-aktiviteten
-        else if (v.getId() == R.id.loginlink){
+        else if (v.getId() == R.id.loginButton){
             startLoginActivity();
         }
     }
