@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:background="@drawable/yellow_background">
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -30,6 +30,17 @@
             android:textSize="31dp"
             android:textColor="#645455"
             android:textStyle="bold" />
+
+        <ImageButton
+            android:background="#0000"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton"
+            android:clickable="true"
+            android:onClick="onClickRefresh"
+            android:src="@android:drawable/stat_notify_sync"
+            android:tint="#645455"
+            android:layout_marginLeft="10dp"/>
     </LinearLayout>
     <ImageView
         android:layout_width="200dp"
@@ -38,8 +49,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"/>
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
