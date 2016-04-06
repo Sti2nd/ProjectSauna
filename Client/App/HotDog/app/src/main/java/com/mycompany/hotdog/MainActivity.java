@@ -119,4 +119,8 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
+
+    public void onClickRefresh(View view){
+        setTemp();
+    }
 }
