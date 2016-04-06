@@ -63,11 +63,9 @@ public class FeedbackActivity extends ActionBarActivity implements View.OnClickL
     public void processFinish(String result) {
         //Sjekker om registrering var suksessfull. Sender isåfall bruker videre til MainActivity.
         if (result.equals("Success")){
-            textViewResponse.setText("It was a glaring success");
-            Toast.makeText(this, "Feedback was succesfully recorded", Toast.LENGTH_SHORT);
+            textViewResponse.setText("Feedback successfully recorded!");
         } else if (result.equals("error")){
-            textViewResponse.setText("It did not work");
-            Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT);
+            textViewResponse.setText("Oops something went wrong.");
         }
     }
 }
