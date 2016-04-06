@@ -76,11 +76,11 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
         //endre tekst til temperatur.
         tempView.setText(s);
         double temperature = Double.parseDouble(s);
-        if (temperature < 20){
+        if (temperature < 25){
             dogState.setImageResource(R.drawable.dog_en);
-        } else if (temperature < 30){
+        } else if (temperature < 35){
             dogState.setImageResource(R.drawable.dog_to);
-        } else if (temperature < 40){
+        } else if (temperature < 45){
             dogState.setImageResource(R.drawable.dog_tre);
         } else{
             dogState.setImageResource(R.drawable.dog_fire);
