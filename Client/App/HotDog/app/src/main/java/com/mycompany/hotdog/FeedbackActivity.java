@@ -35,7 +35,7 @@ public class FeedbackActivity extends ActionBarActivity implements View.OnClickL
         //Linke felter til XML
         feedback = (EditText)findViewById(R.id.inputFeedback);
         textViewResponse = (TextView) findViewById(R.id.textViewResponse);
-        textViewResponse.setText("hwll");
+        textViewResponse.setText("");
     }
 
     @Override
