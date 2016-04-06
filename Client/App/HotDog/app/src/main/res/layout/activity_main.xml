@@ -2,7 +2,9 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@drawable/yellow_background">
+    android:background="@drawable/yellow_background"
+    android:weightSum="1">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,6 +33,17 @@
             android:textColor="#645455"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:text="Admin page"
+        android:id="@+id/adminButton"
+        android:layout_gravity="right"
+        android:onClick="onClickAdmin"
+        android:layout_marginTop="-40dp" />
+
     <ImageView
         android:layout_width="200dp"
         android:layout_height="300dp"
@@ -72,5 +85,6 @@
             android:onClick="onClickFeedback"
             android:layout_marginRight="10dp"/>
     </LinearLayout>
+
 </LinearLayout>
 

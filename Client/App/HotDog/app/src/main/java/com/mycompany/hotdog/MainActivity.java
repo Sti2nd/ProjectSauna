@@ -4,6 +4,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -122,5 +123,10 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
 
     public void onClickRefresh(View view){
         setTemp();
+    }
+
+    public void onClickAdmin(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://folk.ntnu.no/cornelgd/7/php/admin.php"));
+        startActivity(browserIntent);
     }
 }
