@@ -70,7 +70,6 @@ public class RegisterActivity extends ActionBarActivity implements View.OnClickL
         return super.onOptionsItemSelected(item);
     }
 
-
     // Denne metoden blir kalt når OK blir trykket, eller når teksten til Login blir trykket.
     @Override
     public void onClick(View v) {

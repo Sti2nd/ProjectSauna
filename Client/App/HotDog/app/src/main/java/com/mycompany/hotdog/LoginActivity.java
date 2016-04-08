@@ -48,6 +48,7 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -64,7 +65,7 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
         return super.onOptionsItemSelected(item);
     }
-
+    
 
     //Kalles når PHP-server gir svar
     @Override
