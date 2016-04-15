@@ -1,47 +1,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="@drawable/yellow_background">
+    android:background="@drawable/yellow_background"
+    android:orientation="vertical">
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Temperatur: "
-            android:textSize="31dp"
-            android:textColor="#645455" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/show_temp"
-            android:textSize="31dp"
-            android:text="000"
-            android:textColor="#645455"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="°C"
-            android:textSize="31dp"
-            android:textColor="#645455"
-            android:textStyle="bold" />
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="right">
 
         <ImageButton
             android:background="#0000"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:id="@+id/imageButton"
             android:clickable="true"
             android:onClick="onClickRefresh"
             android:src="@android:drawable/stat_notify_sync"
             android:tint="#645455"
-            android:layout_marginLeft="10dp"/>
+            android:scaleType="fitXY" />
     </LinearLayout>
+
     <ImageView
         android:layout_width="200dp"
         android:layout_height="300dp"
@@ -49,14 +29,42 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_temp"
+            android:textSize="60dp"
+            android:text="000"
+            android:textColor="#645455"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="°C"
+            android:textSize="60dp"
+            android:textColor="#645455"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="bottom|center_horizontal">
+        android:gravity="bottom|center_horizontal"
+        android:layout_marginTop="15dp">
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:text="Log out"
             android:id="@+id/button2"
             android:height="70dp"
@@ -69,7 +77,7 @@
             android:layout_marginRight="10dp" />
         <Button
             android:layout_width="180dp"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:text="Leave feedback"
             android:id="@+id/button"
             android:height="70dp"
@@ -79,7 +87,7 @@
             android:textColor="#e7d3b0"
             android:typeface="monospace"
             android:onClick="onClickFeedback"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -13,34 +13,37 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Leave your feedback"
-        android:layout_marginBottom="15dp"
-        android:id="@+id/adminText" />
+        android:id="@+id/adminText"
+        android:layout_gravity="center_horizontal"
+        android:textSize="24dp"
+        android:textColor="#645455"
+        android:textStyle="bold" />
 
-    <FrameLayout
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="88dp"
-        android:layout_weight="0.41"
-        android:layout_marginBottom="15dp">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/inputFeedback"
-            android:layout_gravity="center_horizontal"
-            android:maxHeight="160dp" />
-    </FrameLayout>
+        android:layout_height="150dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/inputFeedback"
+        android:layout_gravity="center_horizontal"
+        android:maxHeight="160dp"
+        android:background="#FFFFFF"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="40dp" />
 
     <Button
-        android:layout_width="124dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
         android:text="Send feedback"
         android:id="@+id/feedbackButton"
         android:layout_gravity="center_horizontal"
         android:background="#cb615e5c"
         android:textColor="#e7d3b0"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,29 +53,22 @@
         android:layout_gravity="center_horizontal" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click backspace on your phone to go back to the Main activity"
+        android:text="Click backspace on your phone to go back to the main activity or"
         android:id="@+id/textView2"
         android:layout_weight="0.15"
         android:layout_marginTop="70dp"
         android:layout_marginLeft="10dp"
         android:textColor="#494747"
-        android:textSize="22dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OR"
-        android:id="@+id/textView3"
+        android:textSize="14dp"
         android:layout_gravity="center_horizontal"
-        android:textColor="#494747"
-        android:layout_marginLeft="0dp"
-        android:textSize="24dp" />
+        android:gravity="center"
+        android:layout_marginRight="10dp" />
 
     <Button
-        android:layout_width="167dp"
-        android:layout_height="51dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
         android:text="Log out"
         android:id="@+id/logoutButton"
         android:height="70dp"
@@ -82,8 +78,8 @@
         android:textColor="#e7d3b0"
         android:typeface="monospace"
         android:onClick="onClick"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp" />
 
 
 </LinearLayout>
