@@ -87,7 +87,7 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         }
     }
 
-
+    //Sjekker om nettverk er tilgjengelig
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

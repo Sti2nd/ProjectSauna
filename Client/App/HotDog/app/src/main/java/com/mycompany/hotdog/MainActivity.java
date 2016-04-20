@@ -41,6 +41,7 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
         startBackgroundService();
     }
 
+    //Henter i bakgrunnen temperaturen hvert minutt
     private void startBackgroundService() {
         try {
             AlarmManager alarms = (AlarmManager) this
@@ -60,6 +61,7 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
         }
     }
 
+    //
     private void setTemp() {
         //Send raspnum til PHP-server
         HashMap postData = new HashMap();
@@ -84,29 +86,6 @@ public class MainActivity extends ActionBarActivity implements AsyncResponse {
         } else{
             dogState.setImageResource(R.drawable.dog_fire);
         }
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-/*        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }*/
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void onClickFeedback(View view) {
