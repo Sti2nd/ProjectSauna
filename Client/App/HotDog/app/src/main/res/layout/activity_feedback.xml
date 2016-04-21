@@ -73,7 +73,6 @@
         android:id="@+id/logoutButton"
         android:height="70dp"
         android:width="130dp"
-        android:textSize="17dp"
         android:background="#cb615e5c"
         android:textColor="#e7d3b0"
         android:typeface="monospace"
